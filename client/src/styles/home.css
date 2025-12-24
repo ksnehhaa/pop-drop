@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.home-root {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== Gradient blobs ===== */
+.gradient-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.blob {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  animation: float 12s infinite ease-in-out alternate;
+}
+
+.blob1 {
+  background: #ff6b6b;
+  top: 10%;
+  left: -20%;
+}
+
+.blob2 {
+  background: #6b8cff;
+  bottom: 20%;
+  right: -20%;
+  animation-delay: 3s;
+}
+
+.blob3 {
+  background: #9dffb0;
+  top: 60%;
+  left: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px) translateX(0px);
+  }
+  to {
+    transform: translateY(-40px) translateX(40px);
+  }
+}
+
+/* ===== Main content ===== */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.title {
+  color: #ff9b9b;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+/* ===== Card ===== */
+.card {
+  width: 100%;
+  max-width: 320px;
+  background: #e5e5e5;
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card textarea {
+  resize: none;
+  height: 90px;
+  border-radius: 16px;
+  border: none;
+  padding: 14px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ===== Buttons ===== */
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: #dcdcdc;
+}
+
+.primary-btn {
+  background: black;
+  color: white;
+}
