@@ -1,8 +1,10 @@
+import splash from "../assets/splash.png";
+
 const SplashScreen = ({ onStart }) => {
   return (
     <div className="splash">
       <img
-        src="/src/assets/splash.png"
+        src={splash}
         alt="POP-DROP"
         className="splash-image"
       />
